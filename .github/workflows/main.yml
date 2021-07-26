@@ -17,8 +17,8 @@ jobs:
         with:
           python-version: "3.9"
 
-      - name: Install Python tools
-        run: pip install poetry cibuildwheel --pre
+      - name: Install cibuildwheel
+        run: pip install cibuildwheel
 
       - name: Build wheels
         run: cibuildwheel --output-dir dist

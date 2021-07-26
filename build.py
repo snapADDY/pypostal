@@ -1,6 +1,5 @@
 from setuptools import Extension
 
-
 def build(setup_kwargs: dict):
     setup_kwargs["ext_modules"] = [
         Extension(
