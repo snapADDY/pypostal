@@ -4,7 +4,7 @@
 from __future__ import unicode_literals
 
 import unittest
-from postal.expand import *
+from addresses.expand import *
 
 
 class TestExpand(unittest.TestCase):

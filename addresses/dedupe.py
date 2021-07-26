@@ -1,7 +1,7 @@
 """Python bindings to libpostal near_dupe_hashes."""
 
-from postal import _dedupe
-from postal.utils.enum import Enum, EnumValue
+from addresses import _dedupe
+from addresses.utils.enum import Enum, EnumValue
 
 
 class duplicate_status(Enum):

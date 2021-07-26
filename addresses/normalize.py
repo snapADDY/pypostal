@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from postal import _normalize
-from postal.token_types import token_types
+from addresses import _normalize
+from addresses.token_types import token_types
 
-from postal.utils.encoding import safe_decode
+from addresses.utils.encoding import safe_decode
 
 # String options
 NORMALIZE_STRING_LATIN_ASCII = _normalize.NORMALIZE_STRING_LATIN_ASCII

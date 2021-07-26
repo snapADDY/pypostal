@@ -1,5 +1,5 @@
-from postal._token_types import *
-from postal.utils.enum import Enum, EnumValue
+from addresses._token_types import *
+from addresses.utils.enum import Enum, EnumValue
 
 
 class token_types(Enum):

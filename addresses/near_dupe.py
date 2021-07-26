@@ -1,6 +1,6 @@
 """Python bindings to libpostal near_dupe_hashes."""
 
-from postal import _near_dupe
+from addresses import _near_dupe
 
 
 def near_dupe_hashes(labels, values, languages=None, **kw):

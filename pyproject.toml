@@ -1,7 +1,11 @@
 [tool.poetry]
+<<<<<<< HEAD
 name = "postal"
+=======
+name = "addresses"
+>>>>>>> master
 version = "0.1.0"
-description = ""
+description = "Parse street addresses around the world."
 license = "MIT"
 authors = ["snapADDY GmbH <info@snapaddy.com>"]
 readme = "README.md"
