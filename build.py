@@ -1,28 +1,62 @@
-
-from distutils.command.build_ext import build_ext
 from setuptools import Extension
 
 
-
-
-class ExtensionBuilder(build_ext):
-    def build_extensions(self):
-        c = self.compiler
-        _compile = c._compile
-
-        def c_compile(obj, src, ext, cc_args, extra_postargs, pp_opts):
-            cc_args = cc_args + ["-std=c99"] if src.endswith(".c") else cc_args
-            return _compile(obj, src, ext, cc_args, extra_postargs, pp_opts)
-
-        c._compile = c_compile
-        build_ext.build_extensions(self)
-
-
-
 def build(setup_kwargs: dict):
-    setup_kwargs.update({"cmdclass": {"build_ext": ExtensionBuilder}, "ext_modules": [Extension('postal._dedupe',
-                      sources=['postal/pydedupe.c', 'postal/pyutils.c'],
-                      libraries=['postal'],
-                      include_dirs=['/usr/local/include'],
-                      library_dirs=['/usr/local/lib'],
-                      )]})
+    setup_kwargs["ext_modules"] = [
+        Extension(
+            "addresses._expand",
+            sources=["addresses/pyexpand.c", "addresses/pyutils.c"],
+            libraries=["postal"],
+            include_dirs=["/usr/local/include"],
+            library_dirs=["/usr/local/lib"],
+            extra_compile_args=["-std=c99"],
+        ),
+        Extension(
+            "addresses._parser",
+            sources=["addresses/pyparser.c", "addresses/pyutils.c"],
+            libraries=["postal"],
+            include_dirs=["/usr/local/include"],
+            library_dirs=["/usr/local/lib"],
+            extra_compile_args=["-std=c99"],
+        ),
+        Extension(
+            "addresses._token_types",
+            sources=["addresses/pytokentypes.c"],
+            libraries=["postal"],
+            include_dirs=["/usr/local/include"],
+            library_dirs=["/usr/local/lib"],
+            extra_compile_args=["-std=c99"],
+        ),
+        Extension(
+            "addresses._tokenize",
+            sources=["addresses/pytokenize.c", "addresses/pyutils.c"],
+            libraries=["postal"],
+            include_dirs=["/usr/local/include"],
+            library_dirs=["/usr/local/lib"],
+            extra_compile_args=["-std=c99"],
+        ),
+        Extension(
+            "addresses._normalize",
+            sources=["addresses/pynormalize.c", "addresses/pyutils.c"],
+            libraries=["postal"],
+            include_dirs=["/usr/local/include"],
+            library_dirs=["/usr/local/lib"],
+            extra_compile_args=["-std=c99"],
+        ),
+        Extension(
+            "addresses._near_dupe",
+            sources=["addresses/pyneardupe.c", "addresses/pyutils.c"],
+            libraries=["postal"],
+            include_dirs=["/usr/local/include"],
+            library_dirs=["/usr/local/lib"],
+            extra_compile_args=["-std=c99"],
+        ),
+        Extension(
+            "addresses._dedupe",
+            sources=["addresses/pydedupe.c", "addresses/pyutils.c"],
+            libraries=["postal"],
+            include_dirs=["/usr/local/include"],
+            library_dirs=["/usr/local/lib"],
+            extra_compile_args=["-std=c99"],
+        ),
+    ]
