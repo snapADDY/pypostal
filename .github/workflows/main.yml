@@ -23,7 +23,7 @@ jobs:
       - name: Build wheels
         run: cibuildwheel --output-dir dist
         env:
-          CIBW_BUILD: "cp39-*"
+          CIBW_BUILD: "cp38-* cp39-*"
           CIBW_BEFORE_ALL: >
             cd pylibpostal/libpostal && 
             ./bootstrap.sh && 
