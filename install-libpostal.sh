@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd addresses/libpostal && 
+cd pylibpostal/libpostal && 
 ./bootstrap.sh && 
 ./configure && 
 make && 
