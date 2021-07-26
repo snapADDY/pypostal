@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd addresses/libpostal && 
 ./bootstrap.sh && 
 ./configure && 
