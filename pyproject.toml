@@ -2,6 +2,7 @@
 name = "pypostal"
 version = "0.1.0"
 description = ""
+license = "MIT"
 authors = ["snapADDY GmbH <info@snapaddy.com>"]
 readme = "README.md"
 
@@ -9,6 +10,8 @@ readme = "README.md"
 python = "^3.9"
 
 [tool.poetry.dev-dependencies]
+isort = "^5.9.2"
+black = "^21.7-beta.0"
 
 [build-system]
 requires = ["poetry-core"]
