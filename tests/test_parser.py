@@ -4,7 +4,7 @@
 from __future__ import unicode_literals
 
 import unittest
-from postal.parser import parse_address
+from addresses.parser import parse_address
 
 
 class TestParser(unittest.TestCase):

@@ -1,0 +1,33 @@
+name: CI & CD
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-python@v2
+        name: Install Python
+        with:
+          python-version: "3.9"
+
+      - name: Install Python tools
+        run: pip install poetry cibuildwheel
+
+      - name: Build wheels
+        run: cibuildwheel --output-dir dist
+        env:
+          CIBW_BUILD: "cp38-* cp39-*"
+          CIBW_MANYLINUX_X86_64_IMAGE: manylinux1
+          CIBW_MANYLINUX_I686_IMAGE: manylinux1
+          CIBW_TEST_REQUIRES: pytest
+          CIBW_TEST_COMMAND: pytest {project}/tests
+
+      #- name: Deploy wheels
+      #  run: poetry publish --username ${{ secrets.PYPI_USER }} --password ${{ secrets.PYPI_PW }}
