@@ -6,7 +6,7 @@ license = "MIT"
 authors = ["snapADDY GmbH <info@snapaddy.com>"]
 readme = "README.md"
 build = "build.py"
-exclude = ["postal/libpostal"]
+exclude = ["pylibpostal/libpostal"]
 
 [tool.poetry.dependencies]
 python = "^3.9"

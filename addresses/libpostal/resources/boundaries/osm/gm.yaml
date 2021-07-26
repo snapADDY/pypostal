@@ -1,9 +1,0 @@
----
-    admin_level: 
-        "2": "country"
-        "4": "state"
-    overrides:
-        id:
-            relation:
-                # Banjul
-                "3214211": "city"

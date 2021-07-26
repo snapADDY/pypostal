@@ -1,8 +1,0 @@
-admin_codes:
-    admin1: state_district
-    admin2: city
-
-overrides:
-    id:
-        "2593105": "state" # Madeira
-        "3411865": "state" # Azores
