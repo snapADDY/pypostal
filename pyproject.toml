@@ -1,9 +1,5 @@
 [tool.poetry]
-<<<<<<< HEAD
-name = "postal"
-=======
 name = "addresses"
->>>>>>> master
 version = "0.1.0"
 description = "Parse street addresses around the world."
 license = "MIT"
