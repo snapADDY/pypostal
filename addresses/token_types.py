@@ -1,5 +1,5 @@
-from addresses._token_types import *
-from addresses.utils.enum import Enum, EnumValue
+from pylibpostal._token_types import *
+from pylibpostal.utils.enum import Enum, EnumValue
 
 
 class token_types(Enum):

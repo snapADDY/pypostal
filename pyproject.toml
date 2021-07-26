@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "addresses"
+name = "pylibpostal"
 version = "0.1.0"
 description = "Parse street addresses around the world."
 license = "MIT"

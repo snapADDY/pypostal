@@ -2,8 +2,8 @@
 """Python bindings to libpostal expand_address."""
 
 from __future__ import unicode_literals
-from addresses import _expand
-from addresses.utils.encoding import safe_decode
+from pylibpostal import _expand
+from pylibpostal.utils.encoding import safe_decode
 
 
 def expand_address(address, languages=None, **kw):
