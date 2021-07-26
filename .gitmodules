@@ -1,3 +1,0 @@
-[submodule "addresses/libpostal"]
-	path = addresses/libpostal
-	url = git@github.com:openvenues/libpostal.git
