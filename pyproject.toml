@@ -23,5 +23,5 @@ include_trailing_comma = true
 multi_line_output = 3
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core", "setuptools"]
 build-backend = "poetry.core.masonry.api"
