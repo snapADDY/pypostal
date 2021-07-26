@@ -1,6 +1,6 @@
 """Python bindings to libpostal parse_address."""
-from postal import _parser
-from postal.utils.encoding import safe_decode
+from addresses import _parser
+from addresses.utils.encoding import safe_decode
 
 
 def parse_address(address, language=None, country=None):

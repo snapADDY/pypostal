@@ -1,6 +1,6 @@
-from postal import _tokenize
-from postal.utils.encoding import safe_encode, safe_decode
-from postal.token_types import token_types
+from addresses import _tokenize
+from addresses.utils.encoding import safe_encode, safe_decode
+from addresses.token_types import token_types
 
 
 def tokenize(s, whitespace=False):
