@@ -1,0 +1,3 @@
+[submodule "postal/libpostal"]
+	path = postal/libpostal
+	url = git@github.com:openvenues/libpostal.git
