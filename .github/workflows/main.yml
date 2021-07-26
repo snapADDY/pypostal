@@ -24,6 +24,7 @@ jobs:
         run: cibuildwheel --output-dir dist
         env:
           CIBW_BUILD: "cp39-*"
+          CIBW_BEFORE_ALL: "cd addresses/libpostal && ./bootstrap.sh && ./configure && make -j4 && make install"
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux1
           CIBW_MANYLINUX_I686_IMAGE: manylinux1
           CIBW_TEST_REQUIRES: pytest
